@@ -1,0 +1,22 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "node": "current", // Targeting current Node.js version,
+          "esmodules": true
+        },
+        "modules": false // Avoids module transformations
+      }
+    ],
+    "@babel/preset-typescript"
+  ],
+  "ignore": ["./src/_example"],
+  "exclude": ["./src/proto"],
+  "plugins": [
+    "babel-plugin-add-import-extension",
+    "@babel/plugin-syntax-import-assertions"
+    // Add any specific plugins if required
+  ]
+}
